@@ -9,27 +9,29 @@ class PriceSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
     return Container(
-      height: 94,
+      height: height / 8.97,
       decoration: BoxDecoration(
           color: AppColors.primaryColor,
-          borderRadius: const BorderRadius.only(
-              bottomRight: Radius.circular(14),
-              bottomLeft: Radius.circular(14))),
+          borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(height / 60.28),
+              bottomLeft: Radius.circular(height / 60.28))),
       child: Row(
         children: [
-          const SizedBox(
-            width: 25,
+          SizedBox(
+            width: width / 15.6,
           ),
-          const CircleAvatar(
-            radius: 25,
+          CircleAvatar(
+            radius: width / 15.6,
             child: Image(
               fit: BoxFit.cover,
               image: AssetImage("assets/images/polygon-token.png"),
             ),
           ),
-          const SizedBox(
-            width: 10,
+          SizedBox(
+            width: width / 39,
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -38,21 +40,22 @@ class PriceSection extends StatelessWidget {
               Text(
                 '₹94.634',
                 style: TextStyle(
-                    fontSize: 21,
+                    fontSize: height / 40.19,
                     fontWeight: FontWeight.bold,
                     color: AppColors.whiteColor),
               ),
               Text("MATIC",
-                  style: TextStyle(fontSize: 17, color: AppColors.blueColor))
+                  style: TextStyle(
+                      fontSize: height / 49.64, color: AppColors.blueColor))
             ],
           ),
-          const SizedBox(
-            width: 80,
+          SizedBox(
+            width: height / 10.55,
           ),
           Card(
             color: AppColors.whiteColor,
             child: Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(height / 105.5),
               child: Text('Discuss >>'),
             ),
           )

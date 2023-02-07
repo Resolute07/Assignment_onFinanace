@@ -19,6 +19,8 @@ class _ChartSectionState extends State<ChartSection> {
   int? groupValue = 0;
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
     return Container(
       height: 448,
       child: Column(
@@ -27,18 +29,21 @@ class _ChartSectionState extends State<ChartSection> {
           Row(
             children: [
               SizedBox(
-                width: 10,
+                width: width / 39,
               ),
               Card(
                 color: AppColors.primaryColor,
                 child: Padding(
-                  padding: const EdgeInsets.only(
-                      left: 15, right: 15, top: 5, bottom: 5),
+                  padding: EdgeInsets.only(
+                      left: width / 26,
+                      right: width / 26,
+                      top: height / 168.8,
+                      bottom: height / 168.8),
                   child: Text(
                     '2.79%',
                     style: TextStyle(
                       color: AppColors.cyanColor,
-                      fontSize: 14,
+                      fontSize: height / 60.28,
                     ),
                   ),
                 ),
@@ -46,20 +51,27 @@ class _ChartSectionState extends State<ChartSection> {
               Card(
                 color: AppColors.cardColor,
                 child: Padding(
-                  padding: const EdgeInsets.only(
-                      left: 15, right: 15, top: 5, bottom: 5),
+                  padding: EdgeInsets.only(
+                      left: width / 26,
+                      right: width / 26,
+                      top: height / 168.8,
+                      bottom: height / 168.8),
                   child: Text(
                     isClicked ? 'Ascending Angle' : 'MA',
                     style: TextStyle(
-                        color: AppColors.lightblueColor, fontSize: 12),
+                        color: AppColors.lightblueColor,
+                        fontSize: height / 70.3),
                   ),
                 ),
               ),
               Card(
                 color: AppColors.cardColor,
                 child: Padding(
-                  padding: const EdgeInsets.only(
-                      left: 15, right: 15, top: 5, bottom: 5),
+                  padding: EdgeInsets.only(
+                      left: width / 26,
+                      right: width / 26,
+                      top: height / 168.8,
+                      bottom: height / 168.8),
                   child: Text(
                     isClicked ? 'High Exposure ' : 'RSI',
                     style: TextStyle(color: AppColors.RedColor, fontSize: 12),
@@ -79,7 +91,7 @@ class _ChartSectionState extends State<ChartSection> {
               ? Row(
                   children: [
                     SizedBox(
-                      width: 270,
+                      width: width / 1.5,
                     ),
                     GestureDetector(
                       onTap: () {

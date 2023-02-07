@@ -8,79 +8,84 @@ class AboutSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
+
     return Container(
-      height: 809,
-      width: 390,
+      height: height / 1.04,
+      width: width,
       decoration: BoxDecoration(
         color: AppColors.primaryColor,
       ),
       child: Padding(
-        padding: const EdgeInsets.only(top: 61, left: 30, right: 30),
+        padding: EdgeInsets.only(
+            top: height / 13.83, left: width / 13, right: width / 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'About MATIC',
-              style: TextStyle(color: Color(0xFF3455FF), fontSize: 20),
+              style:
+                  TextStyle(color: Color(0xFF3455FF), fontSize: height / 42.2),
             ),
             SizedBox(
-              height: 37,
+              height: height / 22.81,
             ),
             AboutRow(
               About: 'Market Cap',
               value: '65,195 Cr',
             ),
             SizedBox(
-              height: 7,
+              height: height / 120.57,
             ),
             Container(
-              height: 1,
+              height: height / 844,
               color: Color(0xFF1C1C1C),
             ),
             SizedBox(
-              height: 15,
+              height: height / 56.26,
             ),
             AboutRow(
               About: 'Revenue',
               value: '789,112.84 Cr',
             ),
             SizedBox(
-              height: 7,
+              height: height / 120.57,
             ),
             Container(
-              height: 1,
+              height: height / 844,
               color: AppColors.LineColor,
             ),
             SizedBox(
-              height: 15,
+              height: height / 56.26,
             ),
             AboutRow(
               About: 'P/E Ratio',
               value: '30.2',
             ),
             SizedBox(
-              height: 7,
+              height: height / 120.57,
             ),
             Container(
-              height: 1,
+              height: height / 844,
               color: AppColors.LineColor,
             ),
             SizedBox(
-              height: 15,
+              height: height / 56.26,
             ),
             AboutRow(
               About: 'Profit',
               value: '1098.48 Cr',
             ),
             SizedBox(
-              height: 7,
+              height: height / 120.57,
             ),
             Container(
-              height: 1,
+              height: height / 844,
               color: AppColors.LineColor,
             ),
             SizedBox(
-              height: 15,
+              height: height / 56.26,
             ),
             AboutRow(
               About: 'Dividend Yeild',
@@ -90,18 +95,19 @@ class AboutSection extends StatelessWidget {
               height: 7,
             ),
             Container(
-              height: 1,
+              height: height / 844,
               color: AppColors.LineColor,
             ),
             SizedBox(
-              height: 37,
+              height: height / 22.81,
             ),
             Text(
               'Technical Indicators',
-              style: TextStyle(color: AppColors.blueColor, fontSize: 20),
+              style: TextStyle(
+                  color: AppColors.blueColor, fontSize: height / 42.2),
             ),
             SizedBox(
-              height: 37,
+              height: height / 22.81,
             ),
             IndColumn(
               header: 'Cummulative Market Sentiment',
@@ -144,6 +150,9 @@ class IndColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
+
     return Column(
       children: [
         Row(
@@ -151,11 +160,13 @@ class IndColumn extends StatelessWidget {
           children: [
             Text(
               '$header',
-              style: TextStyle(color: AppColors.whiteColor, fontSize: 18),
+              style: TextStyle(
+                  color: AppColors.whiteColor, fontSize: height / 46.89),
             ),
             Text(
               '$value',
-              style: TextStyle(color: AppColors.cyanColor, fontSize: 18),
+              style: TextStyle(
+                  color: AppColors.cyanColor, fontSize: height / 46.89),
             ),
           ],
         ),
@@ -164,7 +175,8 @@ class IndColumn extends StatelessWidget {
         ),
         Text(
           '$desc',
-          style: TextStyle(color: AppColors.fadeFontColor, fontSize: 14),
+          style: TextStyle(
+              color: AppColors.fadeFontColor, fontSize: height / 60.28),
         ),
       ],
     );
@@ -178,16 +190,20 @@ class AboutRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           '$About',
-          style: TextStyle(color: AppColors.fadeFontColor, fontSize: 18),
+          style: TextStyle(
+              color: AppColors.fadeFontColor, fontSize: height / 46.89),
         ),
         Text(
           '$value',
-          style: TextStyle(color: AppColors.whiteColor, fontSize: 18),
+          style:
+              TextStyle(color: AppColors.whiteColor, fontSize: height / 46.89),
         ),
       ],
     );

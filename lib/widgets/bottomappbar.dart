@@ -4,17 +4,19 @@ import 'package:flutter/material.dart';
 class BottomAppBarCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
     return Container(
       color: Color(0xFF000000),
-      height: 113.0,
+      height: height / 7.46,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
-            height: 42,
-            width: 166,
+            height: height / 20.09,
+            width: width / 2.34,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(height / 84.4),
               color: AppColors.blueColor,
             ),
             child: Center(
@@ -22,16 +24,16 @@ class BottomAppBarCustom extends StatelessWidget {
                 'Buy',
                 style: TextStyle(
                     color: AppColors.whiteColor,
-                    fontSize: 16,
+                    fontSize: height / 52.75,
                     fontWeight: FontWeight.w400),
               ),
             ),
           ),
           Container(
-            height: 42,
-            width: 166,
+            height: height / 20.09,
+            width: width / 2.34,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(height / 84.4),
               color: AppColors.whiteColor,
             ),
             child: Center(
@@ -39,7 +41,7 @@ class BottomAppBarCustom extends StatelessWidget {
                 'Sell',
                 style: TextStyle(
                     color: AppColors.primaryColor,
-                    fontSize: 16,
+                    fontSize: height / 52.75,
                     fontWeight: FontWeight.w400),
               ),
             ),
