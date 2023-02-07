@@ -21,6 +21,8 @@ class _DetailsPageState extends State<DetailsPage> {
   bool _isTapped = true;
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
           backgroundColor: AppColors.primarybackgroundColor,
@@ -43,7 +45,7 @@ class _DetailsPageState extends State<DetailsPage> {
                 ),
               ),
               SizedBox(
-                width: 20,
+                width: width / 19.5,
               )
             ],
             backgroundColor: AppColors.primaryColor,
@@ -55,23 +57,23 @@ class _DetailsPageState extends State<DetailsPage> {
               children: [
                 PriceSection(),
                 SizedBox(
-                  height: 10,
+                  height: height / 84.4,
                 ),
                 ChartSection(),
                 SizedBox(
-                  height: 7.9,
+                  height: height / 106.83,
                 ),
                 AnalystExpandable(),
                 SizedBox(
-                  height: 39,
+                  height: height / 21.64,
                 ),
                 PortfolioExpanded(),
                 SizedBox(
-                  height: 40,
+                  height: 21.1,
                 ),
                 HistoricalYeildContainer(),
                 SizedBox(
-                  height: 30,
+                  height: height / 28.13,
                 ),
                 AboutSection()
               ],

@@ -50,7 +50,7 @@ class PriceSection extends StatelessWidget {
             ],
           ),
           SizedBox(
-            width: height / 10.55,
+            width: height / 7,
           ),
           Card(
             color: AppColors.whiteColor,
