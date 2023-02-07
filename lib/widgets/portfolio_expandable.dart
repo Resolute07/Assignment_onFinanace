@@ -7,15 +7,18 @@ class PortfolioExpanded extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return Container(
-      height: 127,
-      width: 366,
+      height: height / 6.64,
+      width: width / 1.06,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: Color(0xFF0000000),
       ),
       child: Padding(
-        padding: const EdgeInsets.only(top: 16, left: 20, right: 20),
+        padding: EdgeInsets.only(
+            top: height / 52.75, left: width / 19.5, right: width / 19.5),
         child: Column(
           children: [
             Row(
@@ -26,23 +29,24 @@ class PortfolioExpanded extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Color(0xFFF8B545),
-                      fontSize: 16),
+                      fontSize: height / 52.75),
                 ),
                 Text(
                   '₹ 14,69,073 ',
-                  style: TextStyle(color: Color(0xFFFFFFFF)),
+                  style: TextStyle(
+                      color: Color(0xFFFFFFFF), fontSize: height / 52.75),
                 )
               ],
             ),
             SizedBox(
-              height: 16,
+              height: height / 52.75,
             ),
             Container(
-              height: 1,
+              height: height / 844,
               color: Color(0xFF15151B),
             ),
             SizedBox(
-              height: 10,
+              height: height / 100,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,14 +57,16 @@ class PortfolioExpanded extends StatelessWidget {
                   children: [
                     Text(
                       'INVESTED',
-                      style: TextStyle(color: Color(0xFF61616A), fontSize: 10),
+                      style: TextStyle(
+                          color: Color(0xFF61616A), fontSize: height / 84.4),
                     ),
                     SizedBox(
-                      height: 8,
+                      height: height / 105.5,
                     ),
                     Text(
                       '\$6400',
-                      style: TextStyle(color: Color(0xFFFFFFFF), fontSize: 10),
+                      style: TextStyle(
+                          color: Color(0xFFFFFFFF), fontSize: height / 84.4),
                     )
                   ],
                 ),
@@ -68,14 +74,16 @@ class PortfolioExpanded extends StatelessWidget {
                   children: [
                     Text(
                       'QUANTITY',
-                      style: TextStyle(color: Color(0xFF61616A), fontSize: 10),
+                      style: TextStyle(
+                          color: Color(0xFF61616A), fontSize: height / 84.4),
                     ),
                     SizedBox(
-                      height: 8,
+                      height: height / 105.5,
                     ),
                     Text(
                       '1.5',
-                      style: TextStyle(color: Color(0xFFFFFFFF), fontSize: 10),
+                      style: TextStyle(
+                          color: Color(0xFFFFFFFF), fontSize: height / 84.4),
                     )
                   ],
                 ),
@@ -83,21 +91,23 @@ class PortfolioExpanded extends StatelessWidget {
                   children: [
                     Text(
                       'BROKER',
-                      style: TextStyle(color: Color(0xFF61616A), fontSize: 10),
+                      style: TextStyle(
+                          color: Color(0xFF61616A), fontSize: height / 84.4),
                     ),
                     SizedBox(
-                      height: 8,
+                      height: height / 105.5,
                     ),
                     Text(
                       'Etherium',
-                      style: TextStyle(color: Color(0xFFFFFFFF), fontSize: 10),
+                      style: TextStyle(
+                          color: Color(0xFFFFFFFF), fontSize: height / 84.4),
                     )
                   ],
                 ),
               ],
             ),
             SizedBox(
-              height: 5,
+              height: height / 180,
             ),
             Icon(
               Icons.keyboard_arrow_down,

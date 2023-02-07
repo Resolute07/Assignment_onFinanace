@@ -79,7 +79,7 @@ class _HistoricalYeildContainerState extends State<HistoricalYeildContainer> {
                         child: Text(
                           'If You would have Invested',
                           style: TextStyle(
-                            fontSize: 18 * text,
+                            fontSize: height / 46.88,
                             fontWeight: FontWeight.w400,
                             color: AppColors.fadeFontColor,
                           ),
@@ -133,7 +133,7 @@ class _HistoricalYeildContainerState extends State<HistoricalYeildContainer> {
                         child: Text(
                           'For previous',
                           style: TextStyle(
-                            fontSize: 18 * text,
+                            fontSize: height / 46.88,
                             fontWeight: FontWeight.w400,
                             color: AppColors.fadeFontColor,
                           ),
@@ -151,7 +151,7 @@ class _HistoricalYeildContainerState extends State<HistoricalYeildContainer> {
                         child: Text(
                           '\$100000',
                           style: TextStyle(
-                            fontSize: 24 * text,
+                            fontSize: height / 35.16,
                             fontWeight: FontWeight.bold,
                             color: AppColors.whiteColor,
                           ),
@@ -168,7 +168,7 @@ class _HistoricalYeildContainerState extends State<HistoricalYeildContainer> {
                       child: Text(
                         '1 Year',
                         style: TextStyle(
-                          fontSize: 24 * text,
+                          fontSize: height / 35.16,
                           fontWeight: FontWeight.bold,
                           color: AppColors.whiteColor,
                         ),
@@ -185,7 +185,7 @@ class _HistoricalYeildContainerState extends State<HistoricalYeildContainer> {
                         child: Text(
                           'You would have',
                           style: TextStyle(
-                            fontSize: 18 * text,
+                            fontSize: height / 46.88,
                             fontWeight: FontWeight.w400,
                             color: AppColors.fadeFontColor,
                           ),
@@ -227,7 +227,8 @@ class _HistoricalYeildContainerState extends State<HistoricalYeildContainer> {
                         Text(
                           '\$1120.78',
                           style: TextStyle(
-                              color: AppColors.whiteColor, fontSize: 22 * text),
+                              color: AppColors.whiteColor,
+                              fontSize: height / 38.36),
                         ),
                         SizedBox(
                           width: width / 78,
@@ -235,7 +236,8 @@ class _HistoricalYeildContainerState extends State<HistoricalYeildContainer> {
                         Text(
                           '1205.67 MATIC',
                           style: TextStyle(
-                              color: AppColors.blueColor, fontSize: 16 * text),
+                              color: AppColors.blueColor,
+                              fontSize: height / 52.75),
                         ),
                       ],
                     ),
